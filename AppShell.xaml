@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="RavenTechSoftwareApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:RavenTechSoftwareApp"
+    xmlns:pages="clr-namespace:RavenTechSoftwareApp.Pages"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <Grid ColumnDefinitions="Auto,*">
+            <Image Grid.Column="0"
+                   Source="logo.webp"
+                   Aspect="AspectFill"
+                   WidthRequest="270">
+
+            </Image>
+        </Grid>
+
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        
+        Icon="casa.png"
+        Title="HOME"
+        ContentTemplate="{DataTemplate pages:Dashboard}"
+        Route="Dashboard"/>
+
+</Shell>
