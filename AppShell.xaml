@@ -26,4 +26,16 @@
         ContentTemplate="{DataTemplate pages:Dashboard}"
         Route="Dashboard"/>
 
+    <ShellContent
+        Icon="fact.png"
+        Title="FACTURAS"
+        ContentTemplate="{DataTemplate pages:Facturas}"
+        Route="Facturas" />
+
+    <ShellContent
+        Icon="porcentaje.png"
+        Title="VENTAS"
+        ContentTemplate="{DataTemplate pages:Ventas}"
+        Route="Ventas" />
+
 </Shell>
