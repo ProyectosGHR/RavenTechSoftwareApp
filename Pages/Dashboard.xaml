@@ -9,7 +9,7 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-
+            
             <Image Source="ravenhome.png" WidthRequest="300" VerticalOptions="FillAndExpand"></Image>
         </VerticalStackLayout>
     </ScrollView>
