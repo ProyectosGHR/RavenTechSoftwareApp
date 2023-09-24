@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RavenTechSoftwareApp.Pages.Facturas"
-             Title="Facturas">
+             x:Class="RavenTechSoftwareApp.Pages.Compras"
+             Title="Compras">
+
     <ScrollView>
         <VerticalStackLayout>
             <Entry Margin="70,100,70,40"
@@ -32,10 +33,10 @@
                Placeholder="TOTAL"
                Keyboard="Numeric"></Entry>
 
-            <Button TextColor="White" ImageSource="fact.png" Text="REGISTRAR FACTURA" WidthRequest="350" BackgroundColor="Green">
+            <Button TextColor="White" ImageSource="compra.png" Text="REGISTRAR COMPRA" WidthRequest="350" BackgroundColor="Green">
 
             </Button>
-            <Button TextColor="Black" Margin="0,40,0,0" Text="VER REGISTROS DE FACTURAS" WidthRequest="350" BackgroundColor="Yellow">
+            <Button TextColor="Black" Margin="0,40,0,0" Text="VER REGISTROS DE COMPRAS" WidthRequest="350" BackgroundColor="Yellow">
 
             </Button>
         </VerticalStackLayout>

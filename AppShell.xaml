@@ -32,4 +32,16 @@
         ContentTemplate="{DataTemplate pages:Facturas}"
         Route="Facturas" />
 
+    <ShellContent
+        Icon="porcentaje.png"
+        Title="VENTAS"
+        ContentTemplate="{DataTemplate pages:Ventas}"
+        Route="Ventas" />
+
+    <ShellContent
+        Icon="compra.png"
+        Title="COMPRAS"
+        ContentTemplate="{DataTemplate pages:Compras}"
+        Route="Compras" />
+
 </Shell>
