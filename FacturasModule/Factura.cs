@@ -20,7 +20,7 @@ namespace RavenTechSoftwareApp.FacturasModule
 
         public override string ToString()
         {
-            return $"#{Id} | {Fecha} | {Vendedor} | {Comprador} | {Descripcion} | {Total} |";
+            return $"#{Id} |Fec: {Fecha} |Ven: {Vendedor} |Com: {Comprador} |Des: {Descripcion} |Tot: ${Total} | ";
         }
 
     }

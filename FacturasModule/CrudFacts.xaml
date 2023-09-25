@@ -5,10 +5,11 @@
              Title="CrudFacts">
     <ScrollView>
         <VerticalStackLayout x:Name="FacturasStackLayout">
-
+            
+            <Label Text="ID" Margin="70,10,0,0"></Label>
             <Entry 
                x:Name="IdEntry"
-               Margin="70,100,70,40"
+               Margin="70,0,70,40"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="ID"
@@ -16,10 +17,11 @@
                IsEnabled="False">
 
             </Entry>
-            
+
+            <Label Text="Fecha" Margin="70,0,0,0"></Label>
             <Entry 
                x:Name="FechaEntry"
-               Margin="70,100,70,40"
+               Margin="70,0,70,40"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="FECHA"
@@ -27,6 +29,7 @@
 
             </Entry>
 
+            <Label Text="Vendedor" Margin="70,0,0,0"></Label>
             <Entry 
                x:Name="VendedorEntry"
                Margin="70,0,70,40"
@@ -37,6 +40,7 @@
 
             </Entry>
 
+            <Label Text="Comprador" Margin="70,0,0,0"></Label>
             <Entry 
                x:Name="CompradorEntry"
                Margin="70,0,70,40"
@@ -47,6 +51,7 @@
 
             </Entry>
 
+            <Label Text="Descripción" Margin="70,0,0,0"></Label>
             <Entry 
                 x:Name="DescripcionEntry"
                 Margin="70,0,70,40"
@@ -58,6 +63,7 @@
 
             </Entry>
 
+            <Label Text="Total" Margin="70,0,0,0"></Label>
             <Entry 
                x:Name="TotalEntry"
                Margin="70,0,70,40"

@@ -18,6 +18,7 @@ public partial class FacturasList : ContentPage
 
     protected override async void OnAppearing()
     {
+        base.OnAppearing();
 
         SurveysPanel.Children.Clear();
 
@@ -40,6 +41,7 @@ public partial class FacturasList : ContentPage
             var button = new Button
             {
                 Text = "Editar",
+                TextColor = Color.FromHex("#FFFFFF"),
                 BackgroundColor = Color.FromHex("#0000FF"), // Azul
                 VerticalOptions = LayoutOptions.Center,
             };
