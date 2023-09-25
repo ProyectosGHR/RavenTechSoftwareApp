@@ -49,7 +49,8 @@ public partial class CrudFacts : ContentPage
         TotalEntry.Text = "";
 
         await DisplayAlert("Exito", "Se actualizo el registro con exito", "Aceptar");
-        await Navigation.PushAsync(new Facturas());
+        await Navigation.PopToRootAsync();
+
 
 
     }
@@ -72,7 +73,7 @@ public partial class CrudFacts : ContentPage
             TotalEntry.Text = "";
 
             await DisplayAlert("Exito", "Se borro el registro con exito", "Aceptar");
-            await Navigation.PushAsync(new Facturas());
+            await Navigation.PopToRootAsync();
         }
     }
 
