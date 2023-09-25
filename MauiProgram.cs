@@ -1,4 +1,6 @@
-﻿namespace RavenTechSoftwareApp;
+﻿
+
+namespace RavenTechSoftwareApp;
 
 public static class MauiProgram
 {

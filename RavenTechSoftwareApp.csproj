@@ -54,6 +54,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="FacturasModule\CrudFacts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FacturasModule\FacturasList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Compras.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
