@@ -13,8 +13,9 @@ namespace RavenTechSoftwareApp.FacturasModule
 
         public FacturaDatabase(string dbPath)
         {
-            _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<Factura>().Wait();
+            
+                _database = new SQLiteAsyncConnection(dbPath);
+                _database.CreateTableAsync<Factura>().Wait();
         }
 
         public Task<List<Factura>> GetFactsAsync()
