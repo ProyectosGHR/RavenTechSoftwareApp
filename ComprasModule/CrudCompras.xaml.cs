@@ -4,9 +4,9 @@ using RavenTechSoftwareApp.Pages;
 
 public partial class CrudCompras : ContentPage
 {
-    CompraDatabase _database;
-    Compra _compras;
-    public CrudCompras(Compra compras)
+    CompraDatabase _database; //hacemos instancias de la compradatabase para poder usar sus metodos 
+    Compra _compras; //instancia de el modelo para poner devolverlo para que lo trabaje compra databse
+    public CrudCompras(Compra compras) //hacemos que crud compra reciba el objeto del modelo para poder trabajarlo
 	{
 		InitializeComponent();
         _database = new CompraDatabase(App.DBPath);
@@ -30,7 +30,7 @@ public partial class CrudCompras : ContentPage
         {
             return;
         }
-
+        //si esta todo completo almacena la informacion en nuevo objeto de tipo compra
         var newfact = new Compra()
         {
             Id = Convert.ToInt32(IdEntry.Text),
@@ -41,6 +41,7 @@ public partial class CrudCompras : ContentPage
             Total = double.TryParse(TotalEntry.Text, out double total) ? total : 0.0
         };
 
+        //mandamos como argumento el nuevo objeto  a compratabase a su metodo savefact
         await _database.SaveFact(newfact);
         // Limpia los campos Entry después de guardar
         FechaEntry.Text = "";
@@ -49,8 +50,8 @@ public partial class CrudCompras : ContentPage
         DescripcionEntry.Text = "";
         TotalEntry.Text = "";
 
-        await DisplayAlert("Exito", "Se actualizo el registro con exito", "Aceptar");
-        await Navigation.PopToRootAsync();
+        await DisplayAlert("Exito", "Se actualizo el registro con exito", "Aceptar");//y desplegamos una alerta que diga que la factura esta actalizada
+        await Navigation.PopToRootAsync();//nos devuelve a la pagina raiz
     }
 
     private async void BorrarCompra_Clicked(object sender, EventArgs e)
@@ -68,13 +69,9 @@ public partial class CrudCompras : ContentPage
             DescripcionEntry.Text = "";
             TotalEntry.Text = "";
 
-            await DisplayAlert("Exito", "Se borro el registro con exito", "Aceptar");
-            await Navigation.PopToRootAsync();
+            await DisplayAlert("Exito", "Se borro el registro con exito", "Aceptar");//desplegamos una alerta que diga que se borro la factura
+            await Navigation.PopToRootAsync();//nos devuelve a la pagina raiz
         }
     }
 
-    private async void Back_Clicked(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync();
-    }
 }

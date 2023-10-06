@@ -2,7 +2,7 @@ namespace RavenTechSoftwareApp.ComprasModule;
 
 public partial class ComprasList : ContentPage
 {
-    CompraDatabase _database;
+    CompraDatabase _database; //instancia de compradatabase para poder usar sus metodos
 
     // Constructor que recibe FacturaDatabase como parámetro
     public ComprasList()
@@ -14,32 +14,32 @@ public partial class ComprasList : ContentPage
     {
         InitializeComponent();
         // Asigna el objeto database recibido como parámetro a _database
-        _database = database;
+        _database = database;//le mandamos la coneccion a compras database con la dbpath que recibe el constructor
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
 
-        SurveysPanel.Children.Clear();
+        SurveysPanel.Children.Clear();//limpia el panel donde aparecen los registros
 
-        var compras = await _database.GetFactsAsync();
+        var compras = await _database.GetFactsAsync();//obtenemos todos los registros
 
         foreach (var faccomprastura in compras)
         {
-            var stackLayout = new StackLayout
+            var stackLayout = new StackLayout //crea un nuevo stacklayout
             {
                 Orientation = StackOrientation.Horizontal,
                 Margin = new Thickness(10, 5),
             };
 
-            var label = new Label
+            var label = new Label //nuevo label 
             {
-                Text = faccomprastura.ToString(),
+                Text = faccomprastura.ToString(),//imprimimos la cadena que retorna el modelo
                 VerticalOptions = LayoutOptions.Center,
             };
 
-            var button = new Button
+            var button = new Button//creamos un nuevo boton    
             {
                 Text = "Editar",
                 TextColor = Color.FromHex("#FFFFFF"),
@@ -47,16 +47,17 @@ public partial class ComprasList : ContentPage
                 VerticalOptions = LayoutOptions.Center,
             };
 
-            button.Clicked += async (s, e) =>
+            button.Clicked += async (s, e) => //decimos que el boton que se crea nos lleve a crudcompras con su evento clicked
             {
                 // Abre la página "CrudFacts" para editar la factura
                 await Navigation.PushAsync(new CrudCompras(faccomprastura)); // Pasa la factura como parámetro
             };
 
-            stackLayout.Children.Add(label);
+            //añadimos el boton y el label al nuevo stacklayout
+            stackLayout.Children.Add(label); 
             stackLayout.Children.Add(button);
 
-            SurveysPanel.Children.Add(stackLayout);
+            SurveysPanel.Children.Add(stackLayout); //metemos el stacklayout en el panel
         }
     }
 }

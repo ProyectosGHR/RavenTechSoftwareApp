@@ -10,6 +10,8 @@ namespace RavenTechSoftwareApp.FacturasModule
 {
     public  class Factura
     {
+        //moelo de compra
+        //autoincrementa el id y es primary key
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Fecha { get; set; }
@@ -18,6 +20,7 @@ namespace RavenTechSoftwareApp.FacturasModule
         public string Descripcion { get; set; }
         public double Total { get; set; }
 
+        //retornamos una cadena con las propiedades del modelo
         public override string ToString()
         {
             return $"#{Id} |Fec: {Fecha} |Ven: {Vendedor} |Com: {Comprador} |Des: {Descripcion} |Tot: ${Total} | ";

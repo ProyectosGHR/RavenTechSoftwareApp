@@ -7,7 +7,7 @@ public partial class Compras : ContentPage
     public Compras()
 	{
 		InitializeComponent();
-        _database = new CompraDatabase(App.DBPath);
+        _database = new CompraDatabase(App.DBPath);//nos conectamos a compra databse 
 
     }
 
@@ -21,6 +21,7 @@ public partial class Compras : ContentPage
             return;
         }
 
+        //si esta todo completo almacena la informacion en nuevo objeto de tipo compra
         var newfact = new Compra()
         {
             Fecha = FechaEntry.Text,
@@ -30,6 +31,7 @@ public partial class Compras : ContentPage
             Total = double.TryParse(TotalEntry.Text, out double total) ? total : 0.0
         };
 
+        //mandamos como argumento el nuevo objeto  a compratabase a su metodo savefact
         await _database.SaveFact(newfact);
 
         MessagingCenter.Send((ContentPage)this, Messages.NewComplete, newfact);
