@@ -73,7 +73,7 @@
 
             </Entry>
 
-            <Button TextColor="White" ImageSource="compras.png" Text="ACTUALIZAR COMPRAS" WidthRequest="350" BackgroundColor="Green" x:Name="GuardarCompras" Clicked="GuardarCompras_Clicked">
+            <Button TextColor="White" ImageSource="compra.png" Text="ACTUALIZAR COMPRAS" WidthRequest="350" BackgroundColor="Green" x:Name="GuardarCompras" Clicked="GuardarCompras_Clicked">
 
             </Button>
             <Button TextColor="Black" Margin="0,40,0,0" Text="BORRAR REGISTRO" WidthRequest="350" BackgroundColor="Red" x:Name="BorrarCompra" Clicked="BorrarCompra_Clicked">

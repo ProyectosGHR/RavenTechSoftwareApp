@@ -35,7 +35,7 @@ public partial class ComprasList : ContentPage
 
             var label = new Label
             {
-                Text = compras.ToString(),
+                Text = faccomprastura.ToString(),
                 VerticalOptions = LayoutOptions.Center,
             };
 
