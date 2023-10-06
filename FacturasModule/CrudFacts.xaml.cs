@@ -3,8 +3,8 @@ using RavenTechSoftwareApp.Pages;
 
 public partial class CrudFacts : ContentPage
 {
-    FacturaDatabase _database;
-    Factura _factura;
+    FacturaDatabase _database; //hacemos instancias de la Facturadatabase para poder usar sus metodos 
+    Factura _factura;//instancia de el modelo para poner devolverlo para que lo trabaje compra databse
     public CrudFacts(Factura factura)
 	{
 		InitializeComponent();
@@ -29,7 +29,7 @@ public partial class CrudFacts : ContentPage
         {
             return;
         }
-
+        //si esta todo completo almacena la informacion en nuevo objeto de tipo factura
         var newfact = new Factura()
         {
             Id = Convert.ToInt32(IdEntry.Text),
@@ -39,7 +39,7 @@ public partial class CrudFacts : ContentPage
             Descripcion = DescripcionEntry.Text,
             Total = double.TryParse(TotalEntry.Text, out double total) ? total : 0.0
         };
-
+        //mandamos como argumento el nuevo objeto  a compratabase a su metodo savefact
         await _database.SaveFact(newfact);
         // Limpia los campos Entry después de guardar
         FechaEntry.Text = "";
@@ -48,8 +48,8 @@ public partial class CrudFacts : ContentPage
         DescripcionEntry.Text = "";
         TotalEntry.Text = "";
 
-        await DisplayAlert("Exito", "Se actualizo el registro con exito", "Aceptar");
-        await Navigation.PopToRootAsync();
+        await DisplayAlert("Exito", "Se actualizo el registro con exito", "Aceptar");//y desplegamos una alerta que diga que la factura esta actalizada
+        await Navigation.PopToRootAsync();//nos devuelve a la pagina raiz
 
 
 
@@ -60,7 +60,6 @@ public partial class CrudFacts : ContentPage
     private async void BorrarFact_Clicked(object sender, EventArgs e)
     {
         // Muestra un mensaje de confirmación para borrar la factura
-        var confirmar = await DisplayAlert("Confirmación", "¿Estás seguro de que deseas borrar esta factura?", "Sí", "No");
         if (confirmar)
         {
             // Llama a un método para borrar la factura de la base de datos
@@ -72,8 +71,8 @@ public partial class CrudFacts : ContentPage
             DescripcionEntry.Text = "";
             TotalEntry.Text = "";
 
-            await DisplayAlert("Exito", "Se borro el registro con exito", "Aceptar");
-            await Navigation.PopToRootAsync();
+            await DisplayAlert("Exito", "Se borro el registro con exito", "Aceptar");//desplegamos una alerta que diga que se borro la factura
+            await Navigation.PopToRootAsync();//nos devuelve a la pagina raiz
         }
     }
 

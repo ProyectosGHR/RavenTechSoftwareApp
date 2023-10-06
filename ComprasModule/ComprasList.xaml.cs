@@ -49,8 +49,8 @@ public partial class ComprasList : ContentPage
 
             button.Clicked += async (s, e) => //decimos que el boton que se crea nos lleve a crudcompras con su evento clicked
             {
-                // Abre la página "CrudFacts" para editar la factura
-                await Navigation.PushAsync(new CrudCompras(faccomprastura)); // Pasa la factura como parámetro
+                // Abre la página "CrudCompras" para editar la Compra
+                await Navigation.PushAsync(new CrudCompras(faccomprastura)); // Pasa la compras como parámetro
             };
 
             //añadimos el boton y el label al nuevo stacklayout

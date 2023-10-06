@@ -10,7 +10,7 @@ namespace RavenTechSoftwareApp.FacturasModule
 {
     public  class Factura
     {
-        //moelo de compra
+        //modelo de factura
         //autoincrementa el id y es primary key
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
