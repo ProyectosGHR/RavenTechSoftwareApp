@@ -23,9 +23,8 @@ namespace RavenTechSoftwareApp.FacturasModule
             return _database.Table<Factura>().ToListAsync();//enlistamos los registros de las tablas
         }
 
-    }
 
-    public Task<int> SaveFact(Factura factura)
+        public Task<int> SaveFact(Factura factura)
         {
             //metodo guardda el objeto que recibe, si este ya existe lo actualiza
             if (factura.Id != 0)
@@ -43,7 +42,5 @@ namespace RavenTechSoftwareApp.FacturasModule
         {
             return _database.DeleteAsync(factura);
         }
-
-
     }
 }

@@ -57,7 +57,7 @@ public partial class CrudCompras : ContentPage
     private async void BorrarCompra_Clicked(object sender, EventArgs e)
     {
         // Muestra un mensaje de confirmación para borrar la factura
-        var confirmar = await DisplayAlert("Confirmación", "¿Estás seguro de que deseas borrar esta factura?", "Sí", "No");
+        var confirmar = await DisplayAlert("Confirmación", "¿Estás seguro de que deseas borrar esta compra?", "Sí", "No");
         if (confirmar)
         {
             // Llama a un método para borrar la factura de la base de datos

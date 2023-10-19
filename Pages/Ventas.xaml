@@ -5,38 +5,43 @@
              Title="Ventas">
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout x:Name="FacturasStackLayout">
             <Entry Margin="70,100,70,40"
+                   x:Name="FechaEntry"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="FECHA"
                Keyboard="Plain"></Entry>
             <Entry Margin="70,0,70,40"
+                   x:Name="VendedorEntry"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="VENDEDOR"
                Keyboard="Text"></Entry>
             <Entry Margin="70,0,70,40"
+                   x:Name="CompradorEntry"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="COMPRADOR"
                Keyboard="Text"></Entry>
             <Entry Margin="70,0,70,40"
+                   x:Name="DescripcionEntry"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="DESCRIPCION"
                HeightRequest="100"
                Keyboard="Text"></Entry>
             <Entry Margin="70,0,70,40"
+                   x:Name="TotalEntry"
                BackgroundColor="White"
                TextColor="Black"
                Placeholder="TOTAL"
                Keyboard="Numeric"></Entry>
 
-            <Button TextColor="White" ImageSource="porcentaje.png" Text="REGISTRAR VENTA" WidthRequest="350" BackgroundColor="Green">
+            <Button TextColor="White" ImageSource="porcentaje.png" Text="REGISTRAR VENTA" WidthRequest="350" BackgroundColor="Green" Clicked="resgisventa_Clicked">
 
             </Button>
-            <Button TextColor="Black" Margin="0,40,0,0" Text="VER REGISTROS DE VENTAS" WidthRequest="350" BackgroundColor="Yellow">
+            <Button TextColor="Black" Margin="0,40,0,0" Text="VER REGISTROS DE VENTAS" WidthRequest="350" BackgroundColor="Yellow" Clicked="verlistaventa_Clicked">
 
             </Button>
         </VerticalStackLayout>
